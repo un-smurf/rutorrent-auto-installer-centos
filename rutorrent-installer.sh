@@ -88,11 +88,11 @@ LIBCURL_URL="http://curl.haxx.se/download/$LIBCURL_NAME.tar.gz"
 SIGCPP20_NAME="libsigc++-2.2.8"
 SIGCPP20_URL="http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.2/$SIGCPP20_NAME.tar.gz"
 XMLRPC_SVN_DIR="https://svn.code.sf.net/p/xmlrpc-c/code/stable"
-LIBTORRENT_VERSION="0.12.9"
+LIBTORRENT_VERSION="0.13.4"
 LIBTORRENT_NAME="libtorrent-$LIBTORRENT_VERSION"
 LIBTORRENT_URL="http://libtorrent.rakshasa.no/downloads/$LIBTORRENT_NAME.tar.gz"
 LIBTORRENT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$LIBTORRENT_NAME.tar.gz/download"
-RTORRENT_VERSION="0.8.9"
+RTORRENT_VERSION="0.9.4"
 RTORRENT_NAME="rtorrent-$RTORRENT_VERSION"
 RTORRENT_URL="http://libtorrent.rakshasa.no/downloads/$RTORRENT_NAME.tar.gz"
 RTORRENT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$RTORRENT_NAME.tar.gz/download"
@@ -100,7 +100,7 @@ RTORRENT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$RT
 HTPASSWD_PY_SCRIPT_URL="http://trac.edgewall.org/export/10433/trunk/contrib/htpasswd.py"
 HTPASSWD_PY_SCRIPT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/htpasswd.py/download"
 
-NGINX_NAME="nginx-1.0.5"
+NGINX_NAME="nginx-1.7.1"
 NGINX_URL="http://nginx.org/download/$NGINX_NAME.tar.gz"
 
 LIGHTTPD_NAME="lighttpd-1.4.29"
@@ -1081,7 +1081,7 @@ createSelfSignedCertFile() {
 	if [ ! -f "$OTHER_PEM_FILE" ]; then
 		echo "${CMSG}Creating the self-signed certificate.$CEND"
 		rm -f "$pemfile"
-		openssl req -new -newkey rsa:1024 -days 1000 -nodes -x509 -keyout "$pemfile" -out "$pemfile" -batch \
+		openssl req -new -newkey rsa:2048 -days 1000 -nodes -x509 -keyout "$pemfile" -out "$pemfile" -batch \
 			|| errorExit "Failed to create self-signed certificate."
 		OTHER_PEM_FILE="$pemfile"
 		CREATED_CERT_FILE=y
@@ -4810,7 +4810,7 @@ EOF
 $CQUESTION
 vsftpd is a very secure FTP daemon.$CEND
 EOF
-		askYesNo "Do you want to install vsftpd?" "Yes"
+		askYesNo "Do you want to install vsftpd?" "No"
 		INSTALL_VSFTPD="$answer"
 
 		if [ "$INSTALL_VSFTPD" = y ]; then
@@ -4829,7 +4829,7 @@ EOF
 $CQUESTION
 Webmin is a web-based administration tool for your OS.$CEND
 EOF
-		askYesNo "Do you want to install Webmin?" "Yes"
+		askYesNo "Do you want to install Webmin?" "No"
 		INSTALL_WEBMIN="$answer"
 	fi
 fi
