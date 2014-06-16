@@ -4444,7 +4444,7 @@ askOsUser() {
 		userExists "$user" && break
 
 		echo "${CWARNING}User $user does not exist.$CEND"
-		askYesNo "Do you want to create user $user?" "No"
+		askYesNo "Do you want to create user $user?" "Yes"
 		[ "$answer" = n ] && continue
 
 		echo "${CMSG}Creating user $user.$CEND"
