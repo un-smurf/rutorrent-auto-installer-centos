@@ -1,7 +1,10 @@
 rutorrent-auto-installer-centos
 ===============================
 
-ruTorrent Auto Installer Script for CentOS and Debian/Ubuntu
+ruTorrent Auto Installer Script for CentOS
+
+This is forked from: https://github.com/etiennerached/rutorrent-auto-installer-centos
+I have updated versions and edited Default settings to my requirements 
 
 This auto installer was initially found in here:
 http://sourceforge.net/projects/autodl-irssi/files/autodl-setup/download
