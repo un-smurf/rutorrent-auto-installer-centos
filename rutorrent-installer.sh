@@ -36,11 +36,11 @@ WEBMIN_URL="http://www.webmin.com/download/webmin-current.tar.gz"
 RUTORRENT_TRUNK_DIR="https://rutorrent.googlecode.com/svn/trunk"
 
 # The official tarballs are tried if subversion fails.
-RUTORRENT_VERSION="3.3"
+RUTORRENT_VERSION="3.6"
 RUTORRENT_CORE_NAME="rutorrent-$RUTORRENT_VERSION.tar.gz"
-RUTORRENT_CORE_URL="http://rutorrent.googlecode.com/files/$RUTORRENT_CORE_NAME"
+RUTORRENT_CORE_URL="http://dl.bintray.com/novik65/generic/$RUTORRENT_CORE_NAME"
 RUTORRENT_PLUGINS_NAME="plugins-$RUTORRENT_VERSION.tar.gz"
-RUTORRENT_PLUGINS_URL="http://rutorrent.googlecode.com/files/$RUTORRENT_PLUGINS_NAME"
+RUTORRENT_PLUGINS_URL="http://dl.bintray.com/novik65/generic/$RUTORRENT_PLUGINS_NAME"
 RUTORRENT_CORE_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$RUTORRENT_CORE_NAME/download"
 RUTORRENT_PLUGINS_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$RUTORRENT_PLUGINS_NAME/download"
 
@@ -50,6 +50,8 @@ RUTORRENT_PLUGINS=
 # remove the whole line or comment it (prepend a '#' to the start of the line).
 # If the line starts with '#', the plugin is not installed.
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS _getdir"
+RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS _task"
+RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS check_port"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS autotools"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS chunks"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS cookies"
@@ -74,7 +76,7 @@ RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS rss"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS rssurlrewrite"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS scheduler"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS seedingtime"
-#RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS show_peers_like_wtorrent"
+RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS show_peers_like_wtorrent"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS source"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS theme"
 RUTORRENT_PLUGINS="$RUTORRENT_PLUGINS throttle"
